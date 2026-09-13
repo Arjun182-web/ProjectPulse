@@ -1,0 +1,236 @@
+[
+  {
+    "id": "1789241852385",
+    "createdAt": "2026-09-12T19:37:32.385Z",
+    "updatedAt": "2026-09-12T19:37:32.385Z",
+    "summary": "The bedroom layout has been approved by the client. The architect will issue revised drawings by Thursday, and false ceiling work remains on hold until the drawings receive approval. Meera is set to confirm the wardrobe finish by Friday.",
+    "decisions": [
+      {
+        "text": "Bedroom layout approved",
+        "source": "Client approved the bedroom layout."
+      }
+    ],
+    "actions": [
+      {
+        "task": "Issue the revised bedroom drawing",
+        "responsible": "Architect",
+        "deadline": "Thursday",
+        "priority": "High",
+        "status": "Pending"
+      },
+      {
+        "task": "Confirm the wardrobe finish",
+        "responsible": "Meera",
+        "deadline": "Friday",
+        "priority": "Medium",
+        "status": "Pending"
+      },
+      {
+        "task": "Begin false ceiling work",
+        "responsible": "Contractor",
+        "deadline": "",
+        "priority": "Medium",
+        "status": "Blocked"
+      }
+    ],
+    "stakeholders": [
+      {
+        "name": "Client",
+        "role": "Client"
+      },
+      {
+        "name": "Architect",
+        "role": "Architect"
+      },
+      {
+        "name": "Contractor",
+        "role": "Contractor"
+      },
+      {
+        "name": "Meera",
+        "role": ""
+      }
+    ],
+    "deadlines": [
+      {
+        "item": "Issue revised bedroom drawing",
+        "deadline": "Thursday"
+      },
+      {
+        "item": "Confirm wardrobe finish",
+        "deadline": "Friday"
+      }
+    ],
+    "dependencies": [
+      {
+        "from": "Approval of revised bedroom drawing",
+        "to": "Begin false ceiling work",
+        "reason": "Contractor must not begin false ceiling work until the drawing is approved."
+      }
+    ],
+    "alerts": [
+      {
+        "message": "False ceiling work is on hold pending drawing approval.",
+        "priority": "Medium"
+      }
+    ],
+    "sourceMessage": "Client approved the bedroom layout. Architect will issue the revised bedroom drawing by Thursday. Contractor must not begin false ceiling work until the drawing is approved. Meera will confirm the wardrobe finish by Friday.",
+    "modelUsed": "gemini-3.7-flash"
+  },
+  {
+    "id": "1789240749269",
+    "createdAt": "2026-09-12T19:19:09.269Z",
+    "updatedAt": "2026-09-12T19:27:01.205Z",
+    "summary": "The client has approved the living room ceiling design. The architect is scheduled to issue the revised reflected ceiling plan by Wednesday, which is required before the electrical contractor can begin ceiling wiring. Meera is set to confirm the lighting fixture selection by Friday.",
+    "decisions": [
+      {
+        "text": "Client approved the living room ceiling design.",
+        "source": "Client approved the living room ceiling design."
+      }
+    ],
+    "actions": [
+      {
+        "task": "Issue the revised reflected ceiling plan",
+        "responsible": "Architect",
+        "deadline": "Wednesday",
+        "priority": "High",
+        "status": "Pending"
+      },
+      {
+        "task": "Confirm the lighting fixture selection",
+        "responsible": "Meera",
+        "deadline": "Friday",
+        "priority": "Medium",
+        "status": "Pending"
+      },
+      {
+        "task": "Start ceiling wiring",
+        "responsible": "Electrical contractor",
+        "deadline": "",
+        "priority": "Medium",
+        "status": "Blocked"
+      }
+    ],
+    "stakeholders": [
+      {
+        "name": "Client",
+        "role": "Client"
+      },
+      {
+        "name": "Architect",
+        "role": "Architect"
+      },
+      {
+        "name": "Electrical contractor",
+        "role": "Electrical contractor"
+      },
+      {
+        "name": "Meera",
+        "role": ""
+      }
+    ],
+    "deadlines": [
+      {
+        "item": "Issue revised reflected ceiling plan",
+        "deadline": "Wednesday"
+      },
+      {
+        "item": "Confirm lighting fixture selection",
+        "deadline": "Friday"
+      }
+    ],
+    "dependencies": [
+      {
+        "from": "Issue revised reflected ceiling plan",
+        "to": "Start ceiling wiring",
+        "reason": "Electrical contractor must wait for the revised drawing before starting ceiling wiring."
+      }
+    ],
+    "alerts": [
+      {
+        "message": "Ceiling wiring cannot start until the architect issues the revised reflected ceiling plan.",
+        "priority": "Medium"
+      }
+    ],
+    "sourceMessage": "Client approved the living room ceiling design. Architect will issue the revised reflected ceiling plan by Wednesday. Electrical contractor must wait for the revised drawing before starting ceiling wiring. Meera will confirm the lighting fixture selection by Friday.",
+    "modelUsed": "gemini-3.7-flash"
+  },
+  {
+    "id": "1789239657591",
+    "createdAt": "2026-09-12T19:00:57.591Z",
+    "updatedAt": "2026-09-12T19:00:57.591Z",
+    "summary": "Client approved the kitchen layout with a 300mm island reduction request. The architect is issuing revised drawings tomorrow, fabrication is on hold until drawing approval, and Meera will select countertop material by Monday.",
+    "decisions": [
+      {
+        "text": "Approved kitchen layout with requirement to reduce island by 300mm",
+        "source": "Client"
+      }
+    ],
+    "actions": [
+      {
+        "task": "Issue revised drawing with 300mm island reduction",
+        "responsible": "Architect",
+        "deadline": "Tomorrow",
+        "priority": "High",
+        "status": "Pending"
+      },
+      {
+        "task": "Confirm final countertop material",
+        "responsible": "Meera",
+        "deadline": "Monday",
+        "priority": "Medium",
+        "status": "Pending"
+      },
+      {
+        "task": "Start kitchen fabrication",
+        "responsible": "Contractor",
+        "deadline": "",
+        "priority": "High",
+        "status": "Blocked"
+      }
+    ],
+    "stakeholders": [
+      {
+        "name": "Client",
+        "role": "Client"
+      },
+      {
+        "name": "Architect",
+        "role": "Architect"
+      },
+      {
+        "name": "Contractor",
+        "role": "Contractor"
+      },
+      {
+        "name": "Meera",
+        "role": ""
+      }
+    ],
+    "deadlines": [
+      {
+        "item": "Issue revised drawing",
+        "deadline": "Tomorrow"
+      },
+      {
+        "item": "Confirm final countertop material",
+        "deadline": "Monday"
+      }
+    ],
+    "dependencies": [
+      {
+        "from": "Approval of revised drawing",
+        "to": "Start of fabrication",
+        "reason": "Contractor should not start fabrication until the revised drawing is approved."
+      }
+    ],
+    "alerts": [
+      {
+        "message": "Contractor fabrication must remain on hold until the revised drawing is approved.",
+        "priority": "High"
+      }
+    ],
+    "sourceMessage": "Client approved the kitchen layout but requested the island to be reduced by 300mm. Architect will issue the revised drawing tomorrow. Contractor should not start fabrication until the revised drawing is approved. Meera will confirm the final countertop material by Monday.",
+    "modelUsed": "gemini-3.6-flash"
+  }
+]
