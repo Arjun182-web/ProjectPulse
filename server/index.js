@@ -25,6 +25,6 @@ app.get("/api/health", (req, res) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log(`ProjectPulse API running on http://localhost:${PORT}`);
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`ProjectPulse API running on port ${PORT}`);
 });
