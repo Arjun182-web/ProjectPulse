@@ -168,7 +168,7 @@ const extractedItems = analysis
   setAnalysis(null);
 
   try {
-    const response = await fetch("http://localhost:5000/api/analyze", {
+    const response = await fetch("http://projectpulse-gmni.onrender.com/api/analyze", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -677,7 +677,7 @@ const handleProjectCommandVoiceInput = () => {
   const [apiStatus, setApiStatus] = useState("Checking backend...");
 
 useEffect(() => {
-  fetch("http://localhost:5000/api/health")
+  fetch("http://projectpulse-gmni.onrender.com/api/health")
     .then((response) => response.json())
     .then((data) => {
       setApiStatus(
@@ -695,7 +695,7 @@ useEffect(() => {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/analyze/memory"
+        "https://projectpulse-gmni.onrender.com/api/analyze/memory"
       );
 
       const result = await response.json();
