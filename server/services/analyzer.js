@@ -33,10 +33,15 @@ async function generateWithRetry(model, prompt, config, maxRetries = 2) {
       );
 
       const response = await ai.models.generateContent({
-        model,
-        contents: prompt,
-        config,
-      });
+  model,
+  contents: prompt,
+  config: {
+    ...config,
+    httpOptions: {
+      timeout: 30000,
+    },
+  },
+});
 
       console.log(`✅ Gemini success: ${model}`);
 
@@ -309,7 +314,6 @@ ${message}
   // -----------------------------------------
 
   const models = [
-    "gemini-3.7-flash",
     "gemini-3.6-flash",
     "gemini-3.5-flash",
   ];
@@ -322,7 +326,7 @@ ${message}
         model,
         prompt,
         config,
-        2
+        1
       );
 
       const result = JSON.parse(response.text);
